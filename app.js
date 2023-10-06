@@ -22,3 +22,19 @@ function closeMenu() {
     mobile_menu.style.display = 'none';
     background.style.display = 'none';
 }
+
+// get screen width on resize to show and remove buttons
+function onresize() {
+    let width = document.body.clientWidth;
+    if (width > 768) {
+        menu_btn.style.display = 'none';
+    } else {
+        menu_btn.style.display = 'block';
+    }
+}
+
+window.addEventListener('resize', onresize);
+
+
+
+
